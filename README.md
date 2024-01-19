@@ -40,7 +40,11 @@ import requests
 
 url = "http://127.0.0.1:8000/fbsummarize_text"
 data = {
-    "text": "Your input text goes here."
+    "text": "Your input text goes here.",
+    "params": {
+        "max_length": 150,  # Set your desired maximum length
+        "min_length": 30    # Set your desired minimum length
+    }
 }
 
 response = requests.post(url, json=data)
